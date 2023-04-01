@@ -1,0 +1,32 @@
+@font-face {
+    font-family: ProductSans;
+    src: url(../fonts/ProductSans.ttf);
+}
+
+@font-face {
+    font-family: Rubik;
+    src: url(../fonts/Rubik.ttf);
+}
+:root{
+    --body-font: 'Rubik'
+}
+*{
+    font-family: Rubik !important;
+}
+
+body{
+    background-color: #010115;
+}
+#nav{
+    padding: 40px;
+    justify-content: space-between;
+}
+.nav-content .nav-link{
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0px 20px;
+}
+
+.logo{
+    width: 50px;
+}
