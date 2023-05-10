@@ -1,11 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bankole Emmanuel</title>
     <link rel="shortcut icon" href="assets/icon.png" type="image/x-icon">
+    <!-- online css -->
+    <!-- <link rel="stylesheet" href="http://codewithdripzy.github.io/webui/css/alerts.css">
+    <link rel="stylesheet" href="http://codewithdripzy.github.io/webui/css/all.css">
+    <link rel="stylesheet" href="http://codewithdripzy.github.io/webui/css/animations.css">
+    <link rel="stylesheet" href="http://codewithdripzy.github.io/webui/css/colors.css">
+    <link rel="stylesheet" href="http://codewithdripzy.github.io/webui/css/fonts.css">
+    <link rel="stylesheet" href="http://codewithdripzy.github.io/webui/css/inputs.css">
+    <link rel="stylesheet" href="http://codewithdripzy.github.io/webui/css/layers.css">
+    <link rel="stylesheet" href="http://codewithdripzy.github.io/webui/css/layout.css">
+    <link rel="stylesheet" href="http://codewithdripzy.github.io/webui/css/main.css">
+    <link rel="stylesheet" href="http://codewithdripzy.github.io/webui/css/responsive.css">
+    <link rel="stylesheet" href="http://codewithdripzy.github.io/webui/css/style.css">
+    <link rel="stylesheet" href="http://codewithdripzy.github.io/webui/css/webui.css">
+    <link rel="stylesheet" href="http://codewithdripzy.github.io/webui/css/widgets.css"> -->
+    <!-- <link rel="stylesheet" href="http://codewithdripzy.github.io/webicons/css/all.css"> -->
+    <!-- offline version -->
     <link rel="stylesheet" href="http://localhost/webui/css/alerts.css">
     <link rel="stylesheet" href="http://localhost/webui/css/all.css">
     <link rel="stylesheet" href="http://localhost/webui/css/animations.css">
@@ -19,25 +36,167 @@
     <link rel="stylesheet" href="http://localhost/webui/css/style.css">
     <link rel="stylesheet" href="http://localhost/webui/css/webui.css">
     <link rel="stylesheet" href="http://localhost/webui/css/widgets.css">
-    <link rel="stylesheet" href="http://localhost/webicons/css/all.css">
+    <link rel="stylesheet" href="webicons/css/all.css">
     <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/contact.css">
+    <link rel="stylesheet" href="style/works.css">
+    <link rel="stylesheet" href="style/responsiveness.css">
 </head>
+
 <body>
-    <div class="app">
-        <div id="nav" class="flex-row">
+    <div id="app">
+        <div id="nav" class="flex-row align-items-center">
             <div class="logo-container">
-                <img src="assets/iconw.png" alt="" class="logo">
+                <img src="assets/logo/iconw.png" alt="" class="logo">
             </div>
             <div class="nav-content">
-                <a href="#" class="nav-link">About</a>
-                <a href="#" class="nav-link">Resume</a>
-                <a href="#" class="nav-link">Portfolio</a>
-                <a href="#" class="nav-link">Contact</a>
+                <a onclick="showAvailability()" class="nav-link">Shop</a>
+                <a onclick="openPortfolio()" class="nav-link">Works</a>
+                <!-- <a href="#" class="nav-link">About</a> -->
+                <a onclick="openContactContainer()" class="nav-link">Get in touch</a>
+                <button type="button" class="resume-btn"><i class="fa fa-download"></i> Resume</button>
+            </div>
+            <div class="menu-button">
+                <button type="button"><i class="fa fa-hamburger"></i></button>
             </div>
         </div>
-        <div class="main">
-            
+        <div class="profile">
+            <img src="assets/images/Me.png" alt="Me">
+            <!-- <img src="assets/designs/nonimal-clipart.png" id="decor-1" alt="Background Decoration"> -->
+            <span class="fullname">Emmanuel Bankole</span>
+            <span class="i-stack">I'm a <span id="special-stack"></span></span>
+            <button type="button" id="my-works-btn" onclick="openPortfolio()">My Works</button>
+        </div>
+        <div class="social-icons">
+            <a rel="noopener" href="https://github.com/codewithdripzy" target="_blank"><i class="fab fa-github"></i></a>
+            <a rel="noopener" href="https://instagram.com/thecode.guy" target="_blank"><i
+                    class="fab fa-instagram"></i></a>
+            <a rel="noopener" href="https://twitter.com/thecodeguyy" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a rel="noopener" href="https://linkedin/bankole" target="_blank"><i class="fab fa-linkedin"></i></a>
         </div>
     </div>
+    <div id="works">
+        <span class="works-header">My Works</span>
+        <div class="works-portfolio">
+            <div class="close-btn" onclick="closePortfolio()">&times;</div>
+            <div class="work-card">
+                <img src="assets/images/raspberry.png" alt="Wate Works" class="work-img">
+                <div class="work-content">
+                    <div class="work-tile">
+                        <span class="work-name">Raspberry v1.0.0</span>
+                        <span class="work-state complete-tag">Completed</span>
+                    </div>
+                    <div class="work-stack">
+                        <i class="fab fa-php"></i>
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <a href="https://github.com/codewithdripzy/Raspberry" class="work-btn active-work"
+                        target="_blank">View Work</a>
+                    <!-- <a href="https" class="work-btn">View Work</a> -->
+                </div>
+            </div>
+            <div class="work-card">
+                <img src="assets/images/Plugin.png" alt="Wate Works" class="work-img">
+                <div class="work-content">
+                    <div class="work-tile">
+                        <span class="work-name">PlugIn</span>
+                        <span class="work-state dev-tag">Development</span>
+                    </div>
+                    <div class="work-stack">
+                        <i class="fab fa-php"></i>
+                        <i class="fa fa-database"></i>
+                        <i class="fab fa-css3"></i>
+                        <i class="fab fa-jquery"></i>
+                    </div>
+                    <a class="work-btn disabled">Still under
+                        Development</a>
+                    <!-- <a href="https" class="work-btn">View Work</a> -->
+                </div>
+            </div>
+            <div class="work-card">
+                <img src="assets/images/Katalyst.png" alt="Wate Works" class="work-img">
+                <div class="work-content">
+                    <div class="work-tile">
+                        <span class="work-name">Katalyst</span>
+                        <span class="work-state complete-tag">Completed</span>
+                    </div>
+                    <div class="work-stack">
+                        <i class="fab fa-php"></i>
+                        <i class="fa fa-database"></i>
+                        <i class="fab fa-cpp"></i>
+                    </div>
+                    <a class="work-btn disabled">Currently Unvailable</a>
+                    <!-- <a href="https" class="work-btn">View Work</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="contact">
+        <div class="contact-container">
+            <span class="contact-header">Get in Touch</span>
+
+            <div class="contact-flex-row">
+                <div class="close-btn" onclick="closeContactContainer()">&times;</div>
+                <div class="contact-flex">
+                    <div class="contact-flex-form">
+                        <div class="contact-block">
+                            <div class="input-container">
+                                <!-- <label for="fullname">Fullname</label> -->
+                                <input type="text" name="fullname" id="fullname" placeholder="Fullname">
+                            </div>
+                            <div class="input-container">
+                                <!-- <label for="fullname">Email</label> -->
+                                <input type="email" name="email" id="email" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="contact-block">
+                            <div class="input-container">
+                                <!-- <label for="fullname">Message</label> -->
+                                <textarea name="msg" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                            </div>
+                        </div>
+                        <div class="contact-block">
+                            <div class="input-container">
+                                <button type="submit"><i class="fa fa-paper-plane"></i> Send Message</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-information">
+                        <p class="explain-text">Get in touch, I'm always available , I promise to respond to your
+                            messages as soon as psossible.</p>
+                        <p class="explain-text">Let build your vision toegether, Send a message right now.</p>
+                        <div class="contact-detail">
+                            <div class="contact-list">
+                                <a href="phone:+2348123961144"><i class="fa fa-phone"></i></a>
+                                <span class="contact-detail-info">+2348123961144</span>
+                            </div>
+                            <div class="contact-list">
+                                <a href="mailto:thecodeguyy@gmail.com"><i class="fa fa-envelope"></i></a>
+                                <span class="contact-detail-info">thecodeguyy@gmail.com</span>
+                            </div>
+                            <div class="contact-list">
+                                <a href="#"><i class="fa fa-envelope"></i></a>
+                                <span class="contact-detail-info">thecodeguyy@gmail.com</span>
+                            </div>
+                            <div class="contact-list">
+                                <a href="#"><i class="fa fa-location"></i></a>
+                                <span class="contact-detail-info">Lagos, Nigeria</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="popup-alert" id="pop-up">
+        <div class="x"><i class="fa fa-close"></i></div> Store is Currently Unavailable
+    </div>
+    <!-- <div class="statics">
+    </div> -->
 </body>
+<script src="js/main.js"></script>
+
 </html>

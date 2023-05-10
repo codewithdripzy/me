@@ -1,0 +1,167 @@
+#contact {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #040414;
+    animation: slide-in 1s ease-in-out 1;
+    display: none;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    font-family: 'Product Sans';
+}
+
+@keyframes slide-in {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: 0;
+    }
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Product Sans';
+}
+
+.contact-header,
+.works-header {
+    font-size: xx-large;
+    color: #fff;
+    margin-bottom: 12px;
+}
+
+.contact-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-flex-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #eee;
+    gap: 15px;
+}
+
+.contact-block {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+}
+
+.input-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container label {
+    font-size: small;
+    display: block;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.input-container input,
+.input-container textarea {
+    color: #fff;
+    /* width: 100%; */
+    padding: 12px;
+    border: 1px solid transparent;
+    transition: 0.3s ease all !important;
+}
+
+.input-container input {
+    outline: none !important;
+    border-radius: 7px;
+    background-color: #05051b;
+}
+
+.input-container textarea {
+    /* width: 100%; */
+    border-radius: 7px;
+    background-color: #05051b;
+    outline: none !important;
+    resize: none;
+    font-family: 'Product Sans';
+}
+
+.input-container button {
+    padding: 15px;
+    border: none;
+    border-radius: 7px;
+    margin-top: 5px;
+    background-color: dodgerblue;
+    color: #fff;
+    cursor: pointer;
+}
+
+.input-container button .fa-paper-plane {
+    margin-right: 5px;
+}
+
+.contact-flex-row {
+    display: flex;
+    gap: 30px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.explain-text {
+    width: 350px;
+    display: block;
+    color: #eee;
+}
+
+.contact-detail {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.contact-information {
+    align-items: space-between;
+}
+
+.contact-list {
+    display: flex;
+    padding: 10px;
+    gap: 20px;
+}
+
+.contact-list a i {
+    color: dodgerblue;
+    text-decoration: none;
+}
+
+.contact-detail-info {
+    color: #fff;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    font-size: xx-large;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.2s ease all;
+}
+
+.close-btn:hover {
+    color: tomato;
+}

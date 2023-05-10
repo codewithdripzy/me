@@ -1,0 +1,10 @@
+@media screen and (max-width: 600px) {
+    .nav-content {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+        margin-right: 20px;
+    }
+}
